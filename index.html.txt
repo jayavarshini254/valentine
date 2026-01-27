@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>Hi Love ❤️</h1>
+  <p class="subtitle">I couldn’t send you a gift… so I built you one.</p>
+
+  <button onclick="showMessage()">Click Me 💌</button>
+
+  <div id="message" class="hidden">
+    <p>
+      Even with miles between us, you are my safest place.  
+      Every call, every message, every missed moment just makes me
+      want our forever more.
+    </p>
+    <p>
+      Thank you for choosing me, even from far away.  
+      Happy Valentine’s Day 🤍
+    </p>
+    <p class="sign">— Yours, Always</p>
+  </div>
+
+  <div class="hearts"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
