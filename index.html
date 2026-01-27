@@ -4,65 +4,69 @@
   <meta charset="UTF-8" />
   <title>Varshini × Joshan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="nav">
-  <div class="logo">V × J</div>
-  <nav>
-    <a href="#letter">Letter</a>
-    <a href="#story">Story</a>
-    <a href="#reasons">Why You</a>
-  </nav>
-</header>
-
+<!-- HERO -->
 <section class="hero">
-  <h1>Varshini<br><span>Joshan</span></h1>
-  <p>Not a gift. A decision. Built with intention.</p>
-</section>
-
-<section id="letter" class="section reveal">
-  <h2>A Letter</h2>
-  <p>
-    Hi Joshan,<br><br>
-    I didn’t want to buy you something temporary.
-    I wanted to build something that lasts.
-    This site is my time, my effort, my choice —
-    just like loving you.
-    <br><br>
-    Distance never made us weak.
-    It proved how strong we are.
-  </p>
-</section>
-
-<section id="story" class="section dark reveal">
-  <h2>Our Story</h2>
-  <div class="grid">
-    <div class="box">The first hello</div>
-    <div class="box">Calls past midnight</div>
-    <div class="box">Missing each other</div>
-    <div class="box">Choosing us — daily</div>
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>Varshini × Joshan</h1>
+    <p>Distance never separated us. It defined us.</p>
   </div>
 </section>
 
-<section id="reasons" class="section reveal">
-  <h2>Why You</h2>
-  <ul>
-    <li>You make me feel calm</li>
-    <li>You respect my ambition</li>
-    <li>You never made love feel small</li>
-    <li>You stayed</li>
-  </ul>
+<!-- LETTER -->
+<section class="section reveal">
+  <h2>A Letter For You</h2>
+  <p>
+    Hi Joshan,<br><br>
+    I wanted something immersive, not temporary.
+    Something you could scroll through and *feel*.
+    Every image, every movement here represents how
+    deeply I chose you — even from miles away.
+  </p>
 </section>
 
+<!-- PARALLAX IMAGE -->
+<section class="parallax"></section>
+
+<!-- STORY GRID -->
+<section class="section dark reveal">
+  <h2>Our Story</h2>
+  <div class="story-grid">
+    <div class="story-card">The first hello</div>
+    <div class="story-card">Late night calls</div>
+    <div class="story-card">Missing each other</div>
+    <div class="story-card">Still choosing us</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section reveal">
+  <h2>Moments That Feel Like Us</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" />
+    <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913" />
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" />
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" />
+    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" />
+  </div>
+</section>
+
+<!-- FINAL -->
 <section class="final reveal">
-  <h2>Always.</h2>
+  <h2>It’s Always Been You.</h2>
   <p>— Varshini</p>
 </section>
 
-<script src="script.js"></script>
-</body>
-</html>
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <span class="close">&times;</span>
+  <img id="modalImg">
+</div>
+
+<script src=
