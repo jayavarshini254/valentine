@@ -1,26 +1,28 @@
-function showMessage() {
-  document.getElementById("message").style.display = "block";
-  createHearts();
+function scrollToLove() {
+  window.scrollTo({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
 }
 
 function createHearts() {
-  for (let i = 0; i < 20; i++) {
-    let heart = document.createElement("div");
+  for (let i = 0; i < 30; i++) {
+    const heart = document.createElement("div");
     heart.innerHTML = "❤️";
     heart.style.position = "fixed";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = "100vh";
-    heart.style.fontSize = "20px";
-    heart.style.animation = "floatUp 3s linear forwards";
+    heart.style.bottom = "0";
+    heart.style.fontSize = "22px";
+    heart.style.animation = "float 4s linear forwards";
     document.body.appendChild(heart);
 
-    setTimeout(() => heart.remove(), 3000);
+    setTimeout(() => heart.remove(), 4000);
   }
 }
 
 const style = document.createElement("style");
 style.innerHTML = `
-@keyframes floatUp {
+@keyframes float {
   to {
     transform: translateY(-120vh);
     opacity: 0;
