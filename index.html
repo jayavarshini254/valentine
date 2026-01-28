@@ -1,58 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For My Love ❤️</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Forever ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>For My Love 💖</h1>
-  <p>Every line of code is written with love</p>
-  <button onclick="openSurprise()">Open Surprise 🎁</button>
-</header>
+<canvas id="hearts"></canvas>
 
-<section class="gallery">
-  <h2>Our Memories 📸</h2>
-  <div class="images">
-    <img src="https://source.unsplash.com/300x400/?couple,love" />
-    <img src="https://source.unsplash.com/300x400/?romantic,heart" />
-    <img src="https://source.unsplash.com/300x400/?sunset,couple" />
-    <img src="https://source.unsplash.com/300x400/?hug,love" />
+<nav>
+  <h2>❤️ LoveApp</h2>
+  <div>
+    <button onclick="toggleTheme()">🌙</button>
+    <button onclick="toggleMusic()">🎵</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1 id="typing"></h1>
+  <p>You are my favorite notification forever 💖</p>
+  <button onclick="scrollToGallery()">Explore Our Love ↓</button>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>Our Moments 📸</h2>
+  <div class="grid">
+    <img src="https://source.unsplash.com/600x600/?couple,love">
+    <img src="https://source.unsplash.com/600x600/?romantic,heart">
+    <img src="https://source.unsplash.com/600x600/?hug,relationship">
+    <img src="https://source.unsplash.com/600x600/?sunset,couple">
+    <img src="https://source.unsplash.com/600x600/?holding-hands,love">
+    <img src="https://source.unsplash.com/600x600/?flowers,romance">
   </div>
 </section>
 
-<section class="love-notes">
-  <h2>Why I Love You 💌</h2>
+<section class="timeline">
+  <h2>Our Journey 💞</h2>
+  <ul>
+    <li>First chat 💬</li>
+    <li>First meet 😍</li>
+    <li>First hug 🤗</li>
+    <li>First fight & stronger ❤️</li>
+    <li>Forever together 💍</li>
+  </ul>
+</section>
+
+<section class="notes">
+  <h2>Love Messages 💌</h2>
   <div class="cards">
-    <div class="card">You make me smile every day 😊</div>
-    <div class="card">You’re my safe place 🫶</div>
-    <div class="card">You’re my forever 💍</div>
-    <div class="card">You complete me ❤️</div>
+    <div>You are my home 🏡</div>
+    <div>My heart chose you 💖</div>
+    <div>You are my miracle ✨</div>
+    <div>Forever yours 💍</div>
+    <div>My happiness begins with you 😊</div>
+    <div>Love you endlessly ❤️</div>
   </div>
 </section>
 
-<section class="quiz">
-  <h2>How Well Do You Know Us? 💕</h2>
-  <button onclick="showLove()">Click for Love Meter 💗</button>
-  <p id="result"></p>
+<section class="secret">
+  <h2>Secret Surprise 🔐</h2>
+  <input id="pass" placeholder="Enter our special word">
+  <button onclick="unlock()">Unlock 💘</button>
+  <p id="secretMsg"></p>
+</section>
+
+<section class="meter">
+  <h2>Love Meter 💗</h2>
+  <button onclick="calcLove()">Check Now</button>
+  <p id="loveResult"></p>
 </section>
 
 <footer>
-  Made with ❤️ by Your Girl
+  Built with infinite love ❤️
 </footer>
 
-<!-- Surprise Modal -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h2>I Love You Forever 💘</h2>
-    <p>You are my favorite person in the world 🌍</p>
-    <button onclick="closeSurprise()">Close 💞</button>
-  </div>
-</div>
+<audio id="music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
 
 <script src="script.js"></script>
 </body>
