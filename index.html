@@ -2,71 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Varshini × Joshan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Love ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-text">
-    <h1>Varshini × Joshan</h1>
-    <p>Distance never separated us. It defined us.</p>
+<header>
+  <h1>For My Love 💖</h1>
+  <p>Every line of code is written with love</p>
+  <button onclick="openSurprise()">Open Surprise 🎁</button>
+</header>
+
+<section class="gallery">
+  <h2>Our Memories 📸</h2>
+  <div class="images">
+    <img src="https://source.unsplash.com/300x400/?couple,love" />
+    <img src="https://source.unsplash.com/300x400/?romantic,heart" />
+    <img src="https://source.unsplash.com/300x400/?sunset,couple" />
+    <img src="https://source.unsplash.com/300x400/?hug,love" />
   </div>
 </section>
 
-<!-- LETTER -->
-<section class="section reveal">
-  <h2>A Letter For You</h2>
-  <p>
-    Hi Joshan,<br><br>
-    I wanted something immersive, not temporary.
-    Something you could scroll through and *feel*.
-    Every image, every movement here represents how
-    deeply I chose you — even from miles away.
-  </p>
-</section>
-
-<!-- PARALLAX IMAGE -->
-<section class="parallax"></section>
-
-<!-- STORY GRID -->
-<section class="section dark reveal">
-  <h2>Our Story</h2>
-  <div class="story-grid">
-    <div class="story-card">The first hello</div>
-    <div class="story-card">Late night calls</div>
-    <div class="story-card">Missing each other</div>
-    <div class="story-card">Still choosing us</div>
+<section class="love-notes">
+  <h2>Why I Love You 💌</h2>
+  <div class="cards">
+    <div class="card">You make me smile every day 😊</div>
+    <div class="card">You’re my safe place 🫶</div>
+    <div class="card">You’re my forever 💍</div>
+    <div class="card">You complete me ❤️</div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section reveal">
-  <h2>Moments That Feel Like Us</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" />
-    <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913" />
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
-    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" />
-    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" />
-    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" />
-  </div>
+<section class="quiz">
+  <h2>How Well Do You Know Us? 💕</h2>
+  <button onclick="showLove()">Click for Love Meter 💗</button>
+  <p id="result"></p>
 </section>
 
-<!-- FINAL -->
-<section class="final reveal">
-  <h2>It’s Always Been You.</h2>
-  <p>— Varshini</p>
-</section>
+<footer>
+  Made with ❤️ by Your Girl
+</footer>
 
-<!-- MODAL -->
+<!-- Surprise Modal -->
 <div class="modal" id="modal">
-  <span class="close">&times;</span>
-  <img id="modalImg">
+  <div class="modal-content">
+    <h2>I Love You Forever 💘</h2>
+    <p>You are my favorite person in the world 🌍</p>
+    <button onclick="closeSurprise()">Close 💞</button>
+  </div>
 </div>
 
-<script src=
+<script src="script.js"></script>
+</body>
+</html>
