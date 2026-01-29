@@ -1,55 +1,65 @@
-function openLetter(text){
- document.getElementById("letterText").innerText=text;
- document.getElementById("modal").style.display="flex";
+body{
+margin:0;
+font-family:Poppins;
+background:linear-gradient(#ffd6e8,#ffeef5);
+text-align:center;
 }
 
-function closeLetter(){
- document.getElementById("modal").style.display="none";
+.start{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-const upload=document.getElementById("upload");
-const photos=document.getElementById("photos");
-
-upload.addEventListener("change",()=>{
- [...upload.files].forEach(file=>{
-  const img=document.createElement("img");
-  img.src=URL.createObjectURL(file);
-  photos.appendChild(img);
- });
-});
-
-/* Floating hearts */
-
-const canvas=document.getElementById("hearts");
-const ctx=canvas.getContext("2d");
-
-function resize(){
- canvas.width=window.innerWidth;
- canvas.height=window.innerHeight;
-}
-resize();
-window.onresize=resize;
-
-let hearts=[];
-for(let i=0;i<60;i++){
- hearts.push({
-  x:Math.random()*canvas.width,
-  y:Math.random()*canvas.height,
-  s:Math.random()*4+2,
-  v:Math.random()+0.5
- });
+.btns button{
+padding:15px 25px;
+margin:10px;
+border:none;
+border-radius:30px;
+background:#ff6f91;
+color:white;
+font-size:1rem;
+cursor:pointer;
 }
 
-function animate(){
- ctx.clearRect(0,0,canvas.width,canvas.height);
- ctx.fillStyle="rgba(255,0,120,.7)";
- hearts.forEach(h=>{
-  ctx.beginPath();
-  ctx.arc(h.x,h.y,h.s,0,Math.PI*2);
-  ctx.fill();
-  h.y-=h.v;
-  if(h.y<0) h.y=canvas.height;
- });
- requestAnimationFrame(animate);
+.hidden{display:none}
+
+.gift-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:40px;
 }
-animate();
+
+.gift-grid div{
+background:#ffb3c6;
+padding:30px;
+border-radius:20px;
+font-size:1.5rem;
+cursor:pointer;
+}
+
+.letter{
+padding:40px;
+font-family:Pacifico;
+font-size:1.3rem;
+color:#ff4d6d;
+}
+
+.gallery{
+padding:20px;
+}
+
+#imgBox img{
+width:100px;
+margin:8px;
+border-radius:12px;
+}
+
+.notes div{
+background:white;
+margin:10px;
+padding:15px;
+border-radius:15px;
+}
