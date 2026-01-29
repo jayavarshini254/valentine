@@ -1,69 +1,55 @@
-const text = "I Love You Forever 💖";
-let i=0;
-function type(){
- if(i<text.length){
-   document.getElementById("typing").innerHTML += text.charAt(i);
-   i++;
-   setTimeout(type,100);
- }
-}
-type();
-
-function scrollToGallery(){
- document.getElementById("gallery").scrollIntoView({behavior:"smooth"});
+function openLetter(text){
+ document.getElementById("letterText").innerText=text;
+ document.getElementById("modal").style.display="flex";
 }
 
-function toggleTheme(){
- document.body.classList.toggle("dark");
+function closeLetter(){
+ document.getElementById("modal").style.display="none";
 }
 
-const music=document.getElementById("music");
-function toggleMusic(){
- music.paused ? music.play() : music.pause();
-}
+const upload=document.getElementById("upload");
+const photos=document.getElementById("photos");
 
-function calcLove(){
- const n=Math.floor(Math.random()*15)+85;
- document.getElementById("loveResult").innerHTML=`${n}% Match 💞🔥`;
-}
+upload.addEventListener("change",()=>{
+ [...upload.files].forEach(file=>{
+  const img=document.createElement("img");
+  img.src=URL.createObjectURL(file);
+  photos.appendChild(img);
+ });
+});
 
-function unlock(){
- const val=document.getElementById("pass").value;
- if(val.toLowerCase()=="love"){
-  document.getElementById("secretMsg").innerHTML="You are my forever and always 💍❤️";
- }else{
-  document.getElementById("secretMsg").innerHTML="Try again 😜";
- }
-}
-
-/* Floating Hearts */
+/* Floating hearts */
 
 const canvas=document.getElementById("hearts");
 const ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+
+function resize(){
+ canvas.width=window.innerWidth;
+ canvas.height=window.innerHeight;
+}
+resize();
+window.onresize=resize;
 
 let hearts=[];
-
-for(let i=0;i<50;i++){
+for(let i=0;i<60;i++){
  hearts.push({
-   x:Math.random()*canvas.width,
-   y:Math.random()*canvas.height,
-   s:Math.random()*5+2,
-   v:Math.random()+0.5
+  x:Math.random()*canvas.width,
+  y:Math.random()*canvas.height,
+  s:Math.random()*4+2,
+  v:Math.random()+0.5
  });
 }
 
-function draw(){
+function animate(){
  ctx.clearRect(0,0,canvas.width,canvas.height);
- ctx.fillStyle="rgba(255,0,100,.7)";
+ ctx.fillStyle="rgba(255,0,120,.7)";
  hearts.forEach(h=>{
-   ctx.beginPath();
-   ctx.arc(h.x,h.y,h.s,0,Math.PI*2);
-   ctx.fill();
-   h.y-=h.v;
-   if(h.y<0) h.y=canvas.height;
+  ctx.beginPath();
+  ctx.arc(h.x,h.y,h.s,0,Math.PI*2);
+  ctx.fill();
+  h.y-=h.v;
+  if(h.y<0) h.y=canvas.height;
  });
- requestAnimationFrame(draw);
+ requestAnimationFrame(animate);
 }
-draw();
+animate();
