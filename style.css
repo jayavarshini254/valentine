@@ -1,121 +1,65 @@
-*{box-sizing:border-box}
 body{
 margin:0;
 font-family:Poppins;
-background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-color:#fff;
+background:linear-gradient(#ffd6e8,#ffeef5);
 text-align:center;
-overflow-x:hidden;
 }
 
-header{
-padding:60px 20px;
-font-family:Playfair Display;
+.start{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-.envelopes{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:20px;
-padding:30px;
-}
-
-.env{
-background:#b33b5e;
-border-radius:18px;
-padding:40px 15px;
+.btns button{
+padding:15px 25px;
+margin:10px;
+border:none;
+border-radius:30px;
+background:#ff6f91;
+color:white;
+font-size:1rem;
 cursor:pointer;
-position:relative;
-transition:.4s;
-box-shadow:0 10px 20px rgba(0,0,0,.3);
 }
 
-.env:hover{
-transform:translateY(-8px) scale(1.05);
+.hidden{display:none}
+
+.gift-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:40px;
 }
 
-.env span{
-font-size:.9rem;
+.gift-grid div{
+background:#ffb3c6;
+padding:30px;
+border-radius:20px;
+font-size:1.5rem;
+cursor:pointer;
+}
+
+.letter{
+padding:40px;
+font-family:Pacifico;
+font-size:1.3rem;
+color:#ff4d6d;
 }
 
 .gallery{
-padding:50px 20px;
-}
-
-#photos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:12px;
-margin-top:20px;
-}
-
-#photos img{
-width:100%;
-border-radius:12px;
-box-shadow:0 6px 15px rgba(0,0,0,.3);
-}
-
-.notes{
-padding:50px 20px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:15px;
-}
-
-.cards div{
-background:rgba(255,255,255,.25);
 padding:20px;
+}
+
+#imgBox img{
+width:100px;
+margin:8px;
+border-radius:12px;
+}
+
+.notes div{
+background:white;
+margin:10px;
+padding:15px;
 border-radius:15px;
-backdrop-filter:blur(8px);
-}
-
-footer{
-padding:30px;
-font-size:.9rem;
-}
-
-.modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:none;
-justify-content:center;
-align-items:center;
-background:rgba(0,0,0,.6);
-}
-
-.paper{
-background:#fff;
-color:#b33b5e;
-padding:40px;
-border-radius:20px;
-max-width:300px;
-animation:pop .4s ease;
-}
-
-@keyframes pop{
-from{transform:scale(.5);opacity:0}
-to{transform:scale(1);opacity:1}
-}
-
-.paper button{
-margin-top:15px;
-border:none;
-padding:10px 20px;
-border-radius:20px;
-background:#ff4d6d;
-color:white;
-cursor:pointer;
-}
-
-canvas{
-position:fixed;
-top:0;
-left:0;
-pointer-events:none;
 }
