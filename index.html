@@ -3,83 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Forever ❤️</title>
+<title>Letters For You 💌</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <canvas id="hearts"></canvas>
 
-<nav>
-  <h2>❤️ LoveApp</h2>
-  <div>
-    <button onclick="toggleTheme()">🌙</button>
-    <button onclick="toggleMusic()">🎵</button>
-  </div>
-</nav>
+<header>
+<h1>Letters For You 💖</h1>
+<p>Open whenever you need my love</p>
+</header>
 
-<section class="hero">
-  <h1 id="typing"></h1>
-  <p>You are my favorite notification forever 💖</p>
-  <button onclick="scrollToGallery()">Explore Our Love ↓</button>
+<section class="envelopes">
+
+<div class="env" onclick="openLetter('You are my forever ❤️ I’m always proud of you!')">
+<span>Open when you're sad 😢</span>
+</div>
+
+<div class="env" onclick="openLetter('I miss you more than words can say 💕')">
+<span>Open when you miss me 💌</span>
+</div>
+
+<div class="env" onclick="openLetter('You are the best thing in my life 🥰')">
+<span>Open when you feel insecure 🌸</span>
+</div>
+
+<div class="env" onclick="openLetter('Our love story is my favorite 📖❤️')">
+<span>Open when you think of us 💭</span>
+</div>
+
 </section>
 
-<section class="gallery" id="gallery">
-  <h2>Our Moments 📸</h2>
-  <div class="grid">
-    <img src="https://source.unsplash.com/600x600/?couple,love">
-    <img src="https://source.unsplash.com/600x600/?romantic,heart">
-    <img src="https://source.unsplash.com/600x600/?hug,relationship">
-    <img src="https://source.unsplash.com/600x600/?sunset,couple">
-    <img src="https://source.unsplash.com/600x600/?holding-hands,love">
-    <img src="https://source.unsplash.com/600x600/?flowers,romance">
-  </div>
-</section>
-
-<section class="timeline">
-  <h2>Our Journey 💞</h2>
-  <ul>
-    <li>First chat 💬</li>
-    <li>First meet 😍</li>
-    <li>First hug 🤗</li>
-    <li>First fight & stronger ❤️</li>
-    <li>Forever together 💍</li>
-  </ul>
+<section class="gallery">
+<h2>Our Memories 📸</h2>
+<input type="file" multiple id="upload">
+<div id="photos"></div>
 </section>
 
 <section class="notes">
-  <h2>Love Messages 💌</h2>
-  <div class="cards">
-    <div>You are my home 🏡</div>
-    <div>My heart chose you 💖</div>
-    <div>You are my miracle ✨</div>
-    <div>Forever yours 💍</div>
-    <div>My happiness begins with you 😊</div>
-    <div>Love you endlessly ❤️</div>
-  </div>
+<h2>Everything I Love About You 💞</h2>
+<div class="cards">
+<div>Your smile 😊</div>
+<div>Your care 💗</div>
+<div>Your kindness 🌸</div>
+<div>Your love ❤️</div>
+<div>Your support 🤝</div>
+<div>Your hugs 🤗</div>
+</div>
 </section>
 
-<section class="secret">
-  <h2>Secret Surprise 🔐</h2>
-  <input id="pass" placeholder="Enter our special word">
-  <button onclick="unlock()">Unlock 💘</button>
-  <p id="secretMsg"></p>
-</section>
+<footer>Made with infinite love ❤️</footer>
 
-<section class="meter">
-  <h2>Love Meter 💗</h2>
-  <button onclick="calcLove()">Check Now</button>
-  <p id="loveResult"></p>
-</section>
-
-<footer>
-  Built with infinite love ❤️
-</footer>
-
-<audio id="music" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-</audio>
+<div class="modal" id="modal">
+<div class="paper">
+<p id="letterText"></p>
+<button onclick="closeLetter()">Close 💕</button>
+</div>
+</div>
 
 <script src="script.js"></script>
 </body>
