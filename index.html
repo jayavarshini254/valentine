@@ -3,65 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Letters For You 💌</title>
+<title>My Valentine 💘</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<canvas id="hearts"></canvas>
-
-<header>
-<h1>Letters For You 💖</h1>
-<p>Open whenever you need my love</p>
-</header>
-
-<section class="envelopes">
-
-<div class="env" onclick="openLetter('You are my forever ❤️ I’m always proud of you!')">
-<span>Open when you're sad 😢</span>
+<section class="start">
+<h1>Hey there 💖</h1>
+<p>Will you be my Valentine?</p>
+<div class="btns">
+<button onclick="yes()">Yes of course 💕</button>
+<button id="noBtn">No thank you 😢</button>
 </div>
-
-<div class="env" onclick="openLetter('I miss you more than words can say 💕')">
-<span>Open when you miss me 💌</span>
-</div>
-
-<div class="env" onclick="openLetter('You are the best thing in my life 🥰')">
-<span>Open when you feel insecure 🌸</span>
-</div>
-
-<div class="env" onclick="openLetter('Our love story is my favorite 📖❤️')">
-<span>Open when you think of us 💭</span>
-</div>
-
 </section>
 
-<section class="gallery">
-<h2>Our Memories 📸</h2>
+<section id="gifts" class="hidden">
+<h2>Yay! I made these for you 🎁</h2>
+<div class="gift-grid">
+<div onclick="openLetter()">💌 Letter</div>
+<div onclick="openPhotos()">📸 Photos</div>
+<div onclick="openNotes()">🌹 Messages</div>
+</div>
+</section>
+
+<section id="letter" class="hidden letter">
+<p id="loveText"></p>
+</section>
+
+<section id="photos" class="hidden gallery">
 <input type="file" multiple id="upload">
-<div id="photos"></div>
+<div id="imgBox"></div>
 </section>
 
-<section class="notes">
-<h2>Everything I Love About You 💞</h2>
-<div class="cards">
-<div>Your smile 😊</div>
-<div>Your care 💗</div>
-<div>Your kindness 🌸</div>
-<div>Your love ❤️</div>
-<div>Your support 🤝</div>
-<div>Your hugs 🤗</div>
-</div>
+<section id="notes" class="hidden notes">
+<div>You are my forever ❤️</div>
+<div>I’m proud of you 🥰</div>
+<div>I miss you every day 💞</div>
+<div>You make my life beautiful 🌸</div>
 </section>
-
-<footer>Made with infinite love ❤️</footer>
-
-<div class="modal" id="modal">
-<div class="paper">
-<p id="letterText"></p>
-<button onclick="closeLetter()">Close 💕</button>
-</div>
-</div>
 
 <script src="script.js"></script>
 </body>
