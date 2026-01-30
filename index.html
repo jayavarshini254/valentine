@@ -3,46 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Valentine 💘</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+<title>Parshini ❤️ Joshin</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<section class="start">
-<h1>Hey there 💖</h1>
-<p>Will you be my Valentine?</p>
-<div class="btns">
-<button onclick="yes()">Yes of course 💕</button>
-<button id="noBtn">No thank you 😢</button>
-</div>
+<div class="hearts"></div>
+
+<header>
+<h1>Parshini ❤️ Joshin</h1>
+<p>Our Love Story in Code</p>
+</header>
+
+<nav>
+<a href="story.html">Our Story</a>
+<a href="gallery.html">Gallery</a>
+<a href="reasons.html">Why I Love You</a>
+<a href="letter.html">Love Letter</a>
+<a href="valentine.html">Surprise</a>
+</nav>
+
+<section class="hero">
+<h2>Happy Early Valentine’s Day My Love 💕</h2>
+<p>This website is my heart written in code.</p>
 </section>
 
-<section id="gifts" class="hidden">
-<h2>Yay! I made these for you 🎁</h2>
-<div class="gift-grid">
-<div onclick="openLetter()">💌 Letter</div>
-<div onclick="openPhotos()">📸 Photos</div>
-<div onclick="openNotes()">🌹 Messages</div>
-</div>
-</section>
-
-<section id="letter" class="hidden letter">
-<p id="loveText"></p>
-</section>
-
-<section id="photos" class="hidden gallery">
-<input type="file" multiple id="upload">
-<div id="imgBox"></div>
-</section>
-
-<section id="notes" class="hidden notes">
-<div>You are my forever ❤️</div>
-<div>I’m proud of you 🥰</div>
-<div>I miss you every day 💞</div>
-<div>You make my life beautiful 🌸</div>
-</section>
-
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
