@@ -3,13 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Joshan & Varshini 💕</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-*{box-sizing:border-box}
 
 body{
 margin:0;
@@ -17,7 +14,6 @@ font-family:Poppins;
 background:linear-gradient(135deg,#ff9a9e,#fad0c4);
 color:white;
 text-align:center;
-scroll-behavior:smooth;
 overflow-x:hidden;
 }
 
@@ -25,13 +21,13 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-padding:12px;
 background:rgba(255,255,255,.25);
 backdrop-filter:blur(12px);
+padding:10px;
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
-z-index:10;
+justify-content:center;
+z-index:99;
 }
 
 nav a{
@@ -43,22 +39,17 @@ font-size:14px;
 }
 
 section{
-min-height:100vh;
-padding:110px 18px 60px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
+padding:120px 16px 80px;
 }
 
-h1{font-size:2.2rem}
-p{font-size:1.1rem;max-width:700px}
+h1{font-size:2.3rem}
+p{font-size:1.1rem}
 
 img{
-width:85%;
+width:90%;
 max-width:260px;
-border-radius:20px;
-margin:15px 0;
+border-radius:22px;
+margin:12px 0;
 }
 
 button{
@@ -68,11 +59,7 @@ background:#ff4d6d;
 color:white;
 font-size:16px;
 border-radius:40px;
-cursor:pointer;
-transition:.3s;
 }
-
-button:hover{transform:scale(1.08)}
 
 .heart{
 font-size:70px;
@@ -80,49 +67,38 @@ animation:pulse 1.4s infinite;
 }
 
 @keyframes pulse{
-0%{transform:scale(1)}
 50%{transform:scale(1.3)}
-100%{transform:scale(1)}
 }
 
-.gallery{
+.grid{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:12px;
 }
 
-.gallery img{
-width:160px;
+.grid img{width:160px}
+
+.love-box{
+background:rgba(255,255,255,.18);
+padding:26px;
+border-radius:26px;
+font-size:1.25rem;
+line-height:1.8;
+backdrop-filter:blur(8px);
 }
 
 #secret{display:none;margin-top:20px}
 
-.floating{
+.float{
 position:fixed;
-bottom:-50px;
+bottom:-40px;
 font-size:22px;
-animation:float 6s linear infinite;
+animation:fly 6s linear infinite;
 }
 
-@keyframes float{
-0%{transform:translateY(0);opacity:1}
-100%{transform:translateY(-110vh);opacity:0}
-}
-
-.love-letter{
-font-size:1.25rem;
-line-height:1.8;
-background:rgba(255,255,255,.15);
-padding:25px;
-border-radius:25px;
-backdrop-filter:blur(8px);
-}
-
-@media (min-width:768px){
-h1{font-size:3rem}
-p{font-size:1.2rem}
-.love-letter{font-size:1.4rem}
+@keyframes fly{
+to{transform:translateY(-110vh);opacity:0}
 }
 </style>
 </head>
@@ -132,41 +108,47 @@ p{font-size:1.2rem}
 <nav>
 <a href="#home">Home</a>
 <a href="#story">Story</a>
-<a href="#memories">Memories</a>
+<a href="#memories">Cute</a>
 <a href="#letter">Letter</a>
 <a href="#surprise">Surprise</a>
 </nav>
-
-<audio autoplay loop>
-<source src="https://www.bensound.com/bensound-music/bensound-love.mp3">
-</audio>
 
 <!-- HOME -->
 <section id="home">
 <h1>Joshan ❤️ Varshini</h1>
 <div class="heart">💖</div>
-<img src="https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif">
-<p>Even miles apart, my heart is always with you my love 🌍✨</p>
-<button onclick="alert('I love you endlessly Joshan 🥺❤️')">Tap Me 😘</button>
-<img src="https://media.giphy.com/media/26FPpSuhgHvYo9Kyk/giphy.gif">
+
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+<img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif">
+
+<p>Distance means nothing when love means everything 🌍💞</p>
+
+<img src="https://media.giphy.com/media/13borq7Zo2kulO/giphy.gif">
 </section>
 
 <!-- STORY -->
 <section id="story">
-<h1>Our Love Story 💑</h1>
-<img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif">
-<p>From strangers to soulmates… and forever to infinity 💕</p>
-<img src="https://media.giphy.com/media/xUPGcguWZHRC2HyBRS/giphy.gif">
+<h1>Our Love Story 🐾💑</h1>
+
+<img src="https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif">
+<img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+
+<p>From first hello to forever together 💕</p>
+
+<img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif">
 </section>
 
-<!-- MEMORIES -->
+<!-- CUTE CAT WALL -->
 <section id="memories">
-<h1>Our Cute Moments 📸💞</h1>
-<div class="gallery">
-<img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
-<img src="https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif">
-<img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
-<img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
+<h1>Too Cute To Handle 🐱💖</h1>
+
+<div class="grid">
+<img src="https://media.giphy.com/media/12HZukMBlutpoQ/giphy.gif">
+<img src="https://media.giphy.com/media/5i7umUqAOYYEw/giphy.gif">
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+<img src="https://media.giphy.com/media/3oriO6qJiXajN0TyDu/giphy.gif">
+<img src="https://media.giphy.com/media/6uMqzcbWRhoT6/giphy.gif">
+<img src="https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif">
 </div>
 </section>
 
@@ -174,56 +156,51 @@ p{font-size:1.2rem}
 <section id="letter">
 <h1>My Love Letter 💌</h1>
 
-<div class="love-letter">
-My sweetest Joshan ❤️  
+<div class="love-box">
+My precious Joshan ❤️  
 
-Every day you make my world brighter.  
-Even when distance tries to test us,  
-my love only grows stronger 🥺✨  
+You are the best thing that ever happened to me.  
+Every smile of yours lives in my heart 🥺  
 
-You are my comfort, my happiness,  
-my safe place, and my forever 💞  
+Even with miles between us,  
+my love wraps around you every day 💞  
 
-I dream of the day I run into your arms  
-and never let go 🤗💖  
+You are my home, my happiness, my forever.  
 
-Until then, know that  
-my heart beats only for you.  
-
-Forever yours,  
-Varshini 💕
+I love you more than words can say 💖  
+— Varshini
 </div>
 
-<img src="https://media.giphy.com/media/1BcfiGlOGXzQ/giphy.gif">
-<img src="https://media.giphy.com/media/26FLdmIp6wJr91JAI/giphy.gif">
-
+<img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif">
+<img src="https://media.giphy.com/media/13borq7Zo2kulO/giphy.gif">
 </section>
 
 <!-- SURPRISE -->
 <section id="surprise">
-<h1>One Last Surprise 🎁💖</h1>
-<button onclick="reveal()">Open My Heart 💝</button>
+<h1>For You My Love 🎁💝</h1>
+
+<button onclick="openLove()">Tap Here 💕</button>
 
 <div id="secret">
-<h2>You’re My Forever Person Joshan ❤️🥰</h2>
-<img src="https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif">
+<h2>You’re My Forever 🥺❤️</h2>
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
 <img src="https://media.giphy.com/media/l4FGI8GoTL7N4DsyI/giphy.gif">
 </div>
 </section>
 
 <script>
-function reveal(){
+function openLove(){
 document.getElementById("secret").style.display="block";
 }
 
 setInterval(()=>{
 let h=document.createElement("div");
-h.className="floating";
-h.innerHTML=["💖","💕","❤️","💘"][Math.floor(Math.random()*4)];
+h.className="float";
+h.innerHTML=["💖","💕","❤️","💘","🐱"][Math.floor(Math.random()*5)];
 h.style.left=Math.random()*100+"vw";
 document.body.appendChild(h);
 setTimeout(()=>h.remove(),6000);
-},450);
+},400);
 </script>
 
 </body>
